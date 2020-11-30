@@ -1,21 +1,16 @@
 from time import sleep
 import sys
 
-#def to run function print_slowly to print slooooowwwwwwwlllllyyy
-def print_slowly(text):
+#def to run function print_slowly to print slooooowwwwwwwlllllyyy - args (text, number)
+def print_slowly(text, time):
     for c in text:
         print(c, end='')
         sys.stdout.flush()
-        sleep(0.2)
+        sleep(time)
 
-def print_xtra_slowly(text):
-    for c in text:
-        print(c, end='')
-        sys.stdout.flush()
-        sleep(0.4)
 
 #run function
-print_slowly('Hello World, ')
+print_slowly('Hello World, ', 0.2)
 
 #sleep a moment
 sleep(0.2)
@@ -27,12 +22,13 @@ print("BaBE")
 sleep(2)
 
 #reticente
-print_slowly('...')
-
+print_slowly('...', 0.2)
 
 #print babe... just slowly and demands to change line
-print_xtra_slowly("baaaaabe \n")
+print_slowly("baaaaabe \n", 0.4)
 
+#print with some delay Press enter...
+print_slowly("Press Enter to continue...", 0.1)
 
 #whait for enter
-input("Press Enter to continue...")
+input()
