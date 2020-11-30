@@ -1,21 +1,21 @@
 from time import sleep
 import sys
 
-# print("Hello World, ")
-# time.sleep(1)
-# print("babe")
-# time.sleep(5)
-
-
-
+#def to run function print_slowly to print slooooowwwwwwwlllllyyy
 def print_slowly(text):
     for c in text:
         print(c, end='')
         sys.stdout.flush()
         sleep(0.2)
 
-
+#run function
 print_slowly('Hello World, ')
+
+#sleep a moment
 sleep(0.2)
+
+#print the babe and wait
 print("BaBE")
-sleep(5)
+
+#whait for enter
+input("Press Enter to continue...")
